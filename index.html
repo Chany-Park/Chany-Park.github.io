@@ -218,7 +218,26 @@
 		<center><h3> 마음 전하기 <h/3><br><br></center>
 		<p><button onclick="copyToClipboard_chan('신한 110442082586')"><img src="img/skin/groom.png">찬영 </button>
 			♡ <button onclick="copyToClipboard_su('토스뱅크 100027119341')"><img src="img/skin/bride.png"> 수연</button></p>
-									     							     
+		
+	<script type='text/javascript''>
+	function copyToClipboard_chan(elementId) {
+  		var aux = document.createElement("textarea");
+  		document.body.appendChild(aux);
+		aux.value = elementId;
+  		aux.select();
+  		document.execCommand("copy");
+  		document.body.removeChild(aux);
+	}
+	function copyToClipboard_su(elementId) {
+  		var aux = document.createElement("textarea");
+  		document.body.appendChild(aux);
+		aux.value = elementId;
+  		aux.select();
+  		document.execCommand("copy");
+  		document.body.removeChild(aux);
+  		alert('수연이 계좌 복사!');
+	}								 
+	</script>	
 		<br><br>	
 		<center> 식장 사정 상 화환은 정중히 사양합니다. <br> 감사합니다. </center>
 		
