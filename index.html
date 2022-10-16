@@ -124,7 +124,7 @@
 		</style>
 			</head>
 	
-	<body oncopy="return false" oncut="return false" onpaste="return false">
+	<body>
 		<div class="imageContainer">
 		<center><img src="img/img1.jpg" id="mainImage"></center>
 		</div>
@@ -209,8 +209,8 @@
 		<br>
 		<center><h3> 마음 전하기 <h/3><br><br></center>
 			<h6>찬영</h6>
-			<button id="copybtn_chan" onclick="copyToClibboard()"><img src="img/skin/groom.png"></button>
-		<button id="copybtn_su" onclick="copyToClibboard()"><img src="img/skin/bride.png"></button><h6>수연</h6>
+			<button onclick="copyToClibboard('신한 110442082586')"><img src="img/skin/groom.png"></button>
+		<button onclick="copyToClibboard('토스뱅크 100027119341')"><img src="img/skin/bride.png"></button><h6>수연</h6>
 									     							     
 		<br><br>	
 		<center> 식장 사정 상 화환은 정중히 사양합니다. <br> 감사합니다. </center>
@@ -228,26 +228,16 @@
 	}).render();
 </script>
 			
-
 <script>
-	    function copyToClipboard(val) {
-	    var t = document.createElement("textarea");
-	    document.body.appendChild(t);
-	    t.value = val;
-	    t.select();
-	    document.execCommand('copy');
-	    document.body.removeChild(t);
-	    }
-	
-	    $('#copybtn_chan').click(function() {
-	      copyToClipboard('신한 110442082586');
-	      alert('찬영이의 계좌번호 복사!');
-	    });
-	
-	    $('#copybtn_su').click(function() {
-	      copyToClipboard('토스뱅크 100027119341);
-	      alert('수연이의 계좌번호 복사');
-	    });
+function copyToClipboard(elementId) {
+  var aux = document.createElement("input");
+  aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+  document.body.appendChild(aux);
+  aux.select();
+  document.execCommand("copy");
+  document.body.removeChild(aux);
+  alert('복사 완료!');
+}
 </script>
 	</body>
 </html>
