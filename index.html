@@ -110,7 +110,27 @@
 			
 		</style>
 			</head>
-	
+<script LAUNGUAGE='JAVASCRIPT'>
+	function copyToClipboard_chan(elementId) {
+  		var aux = document.createElement("input");
+  		aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+  		document.body.appendChild(aux);
+  		aux.select();
+  		document.execCommand("copy");
+  		document.body.removeChild(aux);
+  		alert('찬영 계좌 복사!');
+	}
+	function copyToClipboard_su(elementId) {
+  		var aux = document.createElement("input");
+  		aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+  		document.body.appendChild(aux);
+  		aux.select();
+  		document.execCommand("copy");
+  		document.body.removeChild(aux);
+  		alert('수연이 계좌 복사!');
+	}
+</script>
+		
 	<body>
 		<div class="imageContainer">
 		<center><img src="img/img1.jpg" id="mainImage"></center>
@@ -214,26 +234,6 @@
 		"mapHeight" : "350"
 	}).render();
 </script>
-			
-<script LAUNGUAGE='JAVASCRIPT'>
-	function copyToClipboard_chan(elementId) {
-  		var aux = document.createElement("input");
-  		aux.setAttribute("value", document.getElementById(elementId).innerHTML);
-  		document.body.appendChild(aux);
-  		aux.select();
-  		document.execCommand("copy");
-  		document.body.removeChild(aux);
-  		alert('찬영 계좌 복사!');
-	}
-	function copyToClipboard_su(elementId) {
-  		var aux = document.createElement("input");
-  		aux.setAttribute("value", document.getElementById(elementId).innerHTML);
-  		document.body.appendChild(aux);
-  		aux.select();
-  		document.execCommand("copy");
-  		document.body.removeChild(aux);
-  		alert('수연이 계좌 복사!');
-	}
-</script>
+		
 	</body>
 </html>
