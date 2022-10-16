@@ -196,8 +196,8 @@
 		<br>
 		<center><h3> 마음 전하기 <h/3><br><br></center>
 			<h6>찬영</h6>
-		<p><input type="image" src="img/skin/groom.png" onclick="copyToClipboard('신한 110442082586')">
-			<input type="image" src="img/skin/bride.png" onclick="copyToClipboard('토스뱅크 100027119341')"></p><h6>수연</h6>
+		<p><input type="image" src="img/skin/groom.png" onclick="copyToClipboard_chan('신한 110442082586')">
+			<input type="image" src="img/skin/bride.png" onclick="copyToClipboard_su('토스뱅크 100027119341')"></p><h6>수연</h6>
 									     							     
 		<br><br>	
 		<center> 식장 사정 상 화환은 정중히 사양합니다. <br> 감사합니다. </center>
@@ -216,15 +216,24 @@
 </script>
 			
 <script LAUNGUAGE='JAVASCRIPT'>
-function copyToClipboard(elementId) {
-  var aux = document.createElement("input");
-  aux.setAttribute("value", document.getElementById(elementId).innerHTML);
-  document.body.appendChild(aux);
-  aux.select();
-  document.execCommand("copy");
-  document.body.removeChild(aux);
-  alert('복사 완료!');
-}
+	function copyToClipboard_chan(elementId) {
+  		var aux = document.createElement("input");
+  		aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+  		document.body.appendChild(aux);
+  		aux.select();
+  		document.execCommand("copy");
+  		document.body.removeChild(aux);
+  		alert('찬영 계좌 복사!');
+	}
+	function copyToClipboard_su(elementId) {
+  		var aux = document.createElement("input");
+  		aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+  		document.body.appendChild(aux);
+  		aux.select();
+  		document.execCommand("copy");
+  		document.body.removeChild(aux);
+  		alert('수연이 계좌 복사!');
+	}
 </script>
 	</body>
 </html>
