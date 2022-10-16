@@ -196,8 +196,8 @@
 		<br>
 		<center><h3> 마음 전하기 <h/3><br><br></center>
 			<h6>찬영</h6>
-		<button onclick="copyToClipboard('신한 110442082586')"><img src="img/skin/groom.png"></button>
-		<button onclick="copyToClipboard('토스뱅크 100027119341')"><img src="img/skin/bride.png"></button><h6>수연</h6>
+		<p><input type="image" src="img/skin/groom.png" onclick="copyToClipboard('신한 110442082586')">
+			<input type="image" src="img/skin/bride.png" onclick="copyToClipboard('토스뱅크 100027119341')"></p><h6>수연</h6>
 									     							     
 		<br><br>	
 		<center> 식장 사정 상 화환은 정중히 사양합니다. <br> 감사합니다. </center>
@@ -215,7 +215,7 @@
 	}).render();
 </script>
 			
-<script>
+<script LAUNGUAGE='JAVASCRIPT'>
 function copyToClipboard(elementId) {
   var aux = document.createElement("input");
   aux.setAttribute("value", document.getElementById(elementId).innerHTML);
